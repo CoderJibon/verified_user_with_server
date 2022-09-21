@@ -1,0 +1,44 @@
+<section class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a class="btn btn-primary" href="/">back</a>
+                <div class="card mt-1">
+                    
+                    <div class="card-body">
+                        
+                        <h2>Update User Data</h2>
+                        <form id="createFormData" action="/user/update/<%= data.id %> " enctype="multipart/form-data" method="post">
+                            <div class="mb-3">
+                                <label for="Name" class="form-label">Name</label>
+                                <input value="<%= data.name %>" required name="name" type="text" class="form-control" id="Name" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email" class="form-label">Email</label>
+                                <input disabled value="<%= data.email %>" required name="email" type="text" class="form-control" id="Email" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Phone" class="form-label">Phone</label>
+                                <input value="<%= data.phone %>" required name="phone" type="text" class="form-control" id="Phone" placeholder="Phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Photo" class="form-label">Profile Photo</label>
+                                <input id="multerSingleImage" name="multer_single_photo" class="form-control" type="file" id="Photo">
+                                <div>
+                                    <img class="ptImage mt-3" src="/userPhoto/<%= data.Photo %>" alt="">
+                                </div>
+                              </div>
+                            <div class="mb-3"> 
+                                <input class="btn btn-primary w-100" type="submit" value="SUBMIT">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="loading" class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>

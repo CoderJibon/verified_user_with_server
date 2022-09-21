@@ -1,0 +1,34 @@
+<section class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a class="btn btn-primary" href="/create">Add New User</a>
+                <a class="btn btn-warning" href="/unverified">Unverified User</a>
+                <hr>
+                 <h3 class="text-center">VERIFIED USER</h3>
+                <hr>
+                <div class="row">
+                    <% verifiedUser.forEach(data => { %>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <% if (data.Photo == "userPhoto.webp") { %>
+                                <img class="card-img-top" src="userPhoto/userPhoto.webp" alt="<%= data.name %>">
+                                <% } else { %>
+                                  <img class="card-img-top" src="userPhoto/<%= data.Photo %>" alt="<%= data.name %>">
+                              <% } %>
+                            <div class="card-body text-center">
+                              <h5 class="card-title"><%= data.name %> </h5>
+                              <p class="card-text"><%= data.phone %></p>
+                              <a href="/user/view/<%= data.id %>" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
+                           <a class="btn btn-success" href="/user/update/<%= data.id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                           <a id="userDelate" class="btn btn-danger" href="/user/<%= data.id %>"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

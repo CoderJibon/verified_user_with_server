@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+ul{
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+img.unvariImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.table td, .table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+/* img.ptImage.mb-3 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+} */
+div#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    display: none;
+}
