@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4000;
 //express init
 const app = express();
 
-//data manage
+//Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
